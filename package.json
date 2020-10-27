@@ -1,0 +1,13 @@
+{
+  "name": "FoodBot",
+  "version": "1.0.0",
+  "description": "Bot of FoodWave's Discord server",
+  "main": "app.js",
+  "repository": "git@github.com:FoodWave/FoodBot.git",
+  "author": "Antoine Rieuse <antoine.rieuse@epitech.eu>",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^12.4.1",
+    "dotenv": "^8.2.0"
+  }
+}
