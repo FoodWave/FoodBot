@@ -3,7 +3,7 @@ import loadCommands from "../core/loadCommands.js";
 
 const name = "help";
 const description =
-  "Help allow you to see which commands you can use and how to use it";
+  "Get all commands list";
 const execute = async (message, args) => {
   const commands = await loadCommands();
 
