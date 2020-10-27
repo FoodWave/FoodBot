@@ -28,7 +28,6 @@ const commands = commandFiles.map((file) =>
 
 // On bot login
 Bot.on("ready", () => {
-  sqlInit();
   console.log(`Logged in as ${Bot.user.tag}`);
 });
 
