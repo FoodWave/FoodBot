@@ -7,7 +7,7 @@ const description =
 const send_newsletter = (message, args) => {
   const newsletter_channel = message.guild.channels.cache.get(process.env.NEWSLETTER_CHANNEL_ID);
   const newsletterEmbed = new Discord.MessageEmbed()
-    .setColor("#00FF00")
+    .setColor("#FF9E00")
     .setAuthor("Newsletter")
     .setTitle(":warning: **INVENDUS DISPONIBLES** :warning:")
     .setThumbnail(
