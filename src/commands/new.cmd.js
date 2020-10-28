@@ -44,7 +44,7 @@ const execute = (message, args) => {
       );
     }
   } else {
-    message.reply("Woow... you can't do that :persevere: ");
+    message.reply("Woow... you can't do that :disappointed_relieved:");
   }
 };
 
