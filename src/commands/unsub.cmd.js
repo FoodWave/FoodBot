@@ -6,7 +6,7 @@ const execute = (message) => {
           message.member.roles.remove(process.env.NEWSLETTER_ROLE_ID);
           message.reply(`you unsuscribed to our newsletter :sob:`);
         } else {
-            message.reply("you haven't subscribed to the newsletter yet :confused:");
+            message.reply("you haven't subscribed to our newsletter yet :confused:");
         }
       } else {
         message.reply(

@@ -8,7 +8,7 @@ const execute = (message) => {
       message.member.roles.add(process.env.NEWSLETTER_ROLE_ID);
       message.reply(`you suscribed to our newsletter, thanks you ! :blush:`);
     } else {
-        message.reply("you already suscribed to the newsletter :confused:");
+        message.reply("you already suscribed to our newsletter :confused:");
     }
   } else {
     message.reply(
