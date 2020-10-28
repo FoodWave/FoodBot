@@ -4,19 +4,19 @@ const description = "For authorized users only: add a role to a user";
 const add_role = async (message, args) => {
   const user_to_add = message.mentions.members.first()
   const role_to_add = message.guild.roles.cache.find(role => role.name === args[1]);
-  if (!user_to_add.roles.cache.has(role_to_add.id)) {
-    if (!role_to_add) {
-        message.reply("you did an error in your syntax :confused:. Please use !addrole <@User> <RoleName>");
+  if (!role_to_add) {
+      message.reply("you did an error in your syntax :confused:. Please use !addrole <@User> <RoleName>");
     } else {
+      if (!user_to_add.roles.cache.has(role_to_add.id)) {
         try {
             await user_to_add.roles.add(role_to_add);
             message.reply(`role ${args[1]} successfuly added to ${user_to_add} :ok_hand:`);
         } catch {
             message.reply("Woow... you can't do that :disappointed_relieved:");
         }
+    } else {
+        message.reply(`${user_to_add} already has role "${args[1]}" :confused:`);
     }
-  } else {
-    message.reply(`${user_to_add} already has role "${args[1]}" :confused:`);
   }
 };
 

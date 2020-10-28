@@ -4,19 +4,19 @@ const description = "For authorized users only: remove a role to a user";
 const remove_role = async (message, args) => {
   const user_to_remove = message.mentions.members.first()
   const role_to_remove = message.guild.roles.cache.find(role => role.name === args[1]);
-  if (user_to_remove.roles.cache.has(role_to_remove.id)) {
-    if (!role_to_remove) {
-        message.reply("you did an error in your syntax :confused:. Please use !rmrole <@User> <RoleName>");
+  if (!role_to_remove) {
+      message.reply("you did an error in your syntax :confused:. Please use !rmrole <@User> <RoleName>");
     } else {
+      if (user_to_remove.roles.cache.has(role_to_remove.id)) {
         try {
             await user_to_remove.roles.remove(role_to_remove);
             message.reply(`role "${args[1]}" successfuly removed to ${user_to_remove} :ok_hand:`);
         } catch {
             message.reply("Woow... you can't do that :disappointed_relieved:");
         }
+    } else {
+        message.reply(`${user_to_remove} hasn't role "${args[1]}" :confused:`);
     }
-  } else {
-    message.reply(`${user_to_remove} hasn't role "${args[1]}" :confused:`);
   }
 };
 
