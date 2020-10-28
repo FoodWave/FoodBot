@@ -1,12 +1,11 @@
 import dotenv from "dotenv";
 import { readdirSync } from "fs";
 import Discord from "discord.js";
-import { config } from "./src/config.js";
 
 // Getting .env config
 dotenv.config();
 
-const { prefix } = config;
+const prefix = process.env.CMD_PREFIX;
 
 // Starting bot client
 const Bot = new Discord.Client({ autoReconnect: true });
@@ -29,6 +28,7 @@ const commands = commandFiles.map((file) =>
 // On bot login
 Bot.on("ready", () => {
   console.log(`Logged in as ${Bot.user.tag}`);
+  console.log(`Prefix is '${prefix}'`);
 });
 
 // When bot detects a message
