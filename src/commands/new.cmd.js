@@ -22,7 +22,8 @@ const send_newsletter = (message, args) => {
     newsletter_channel.send(newsletterEmbed);
     newsletter_channel.send(
       `<@&${process.env.NEWSLETTER_ROLE_ID}>`
-    );
+      );
+    message.reply("newsletter sent ! :ok_hand:");
   } else {
     message.reply(
       "you did an error in your syntax :confused:. Please use !new item1 amount1 item2 amount2 ..."
