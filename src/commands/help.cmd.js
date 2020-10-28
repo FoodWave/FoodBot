@@ -8,7 +8,7 @@ const execute = async (message, args) => {
   const commands = await loadCommands();
 
   const helpEmbed = new Discord.MessageEmbed()
-    .setColor("#00FF00")
+    .setColor("#FF9E00")
     .setTitle("Help")
     .setThumbnail(
       "https://secure.gravatar.com/avatar/a46e25185d3da919b650a7003804fa5a"
