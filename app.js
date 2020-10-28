@@ -34,7 +34,7 @@ Bot.on("ready", () => {
 // When bot detects a message
 Bot.on("message", (message) => {
   // Detecting bot prefix
-  if (!message.content.startsWith(prefix) || message.author.bot) return;
+  if (!message.content.startsWith(prefix) || message.content.length <= 1 || message.author.bot) return;
 
   // Parsing arguments from command
   const args = message.content.slice(prefix.length).trim().split(/ +/);
