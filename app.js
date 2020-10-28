@@ -28,7 +28,7 @@ const commands = commandFiles.map((file) =>
 // On bot login
 Bot.on("ready", () => {
   console.log(`Logged in as ${Bot.user.tag}`);
-  console.log(`Command prefix set to '${prefix}'`);
+  console.log(`Commands prefix set to '${prefix}'`);
 });
 
 // When bot detects a message
