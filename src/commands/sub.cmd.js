@@ -12,7 +12,7 @@ const execute = (message) => {
     }
   } else {
     message.reply(
-      `please send me your command in <#${process.env.BOT_STUFF_PUBLIC_CHANNEL_ID}> \^\^`
+      `please send me this command in <#${process.env.BOT_STUFF_PUBLIC_CHANNEL_ID}> \^\^`
     );
   }
 };
